@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* awal navbar */
+
+.navbar{
+    /* position: fixed; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: black;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+
+.navbar .logo{
+    font-weight: bold;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.option a{
+    padding: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    margin-right: 5px;
+}
+
+.option a:hover{
+    border-bottom: 3px solid white;
+}
+
+.option .login-button{
+    width: 90px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+}
+
+/* akhir navbar */
+
+/* awal header */
+.header{
+    background-image: url(../img/home.jpg);
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.header-content{
+    color: white;
+    max-width: 620px;
+    margin-top: 150px;
+    padding: 0px 0px 0px 100px;
+}
+
+/* awal content */
+.content-h1{
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.contact{
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+}
+
+.form{
+    width: 900px;
+    height: 240px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 1000;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form-info{
+    background-color: aqua;
+    padding: 2.3rem 2.3rem;
+    position: relative;
+}
+
+.form-info h2{
+    padding-bottom: 7px;
+}
+
+.form-info li{
+    padding-bottom: 2px;
+}
+
+.form-contact{
+    padding: 2.3rem 2.3rem;
+    background-color: blue;
+    position: relative;
+}
+
+input{
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid #fafafa;
+    padding: 5px 1.2rem 5px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+/* akhir content */
+
+/* awal card */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 0px;
+}
+
+.card{
+    width: 325px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.card-content{
+    text-align: left;
+    padding: 10px;
+}
+
+.card-content img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card-content ul{
+    padding-left: 0;
+}
+
+.card-content li{
+    list-style-type: '✅';
+    text-align: left;
+    list-style-position: outside;
+    padding: 3px;
+    /* padding-inline-start: 1ch; */
+}
+
+.card h3{
+    padding: 10px;
+}
+
+.card-content .limit{
+    list-style-type: '❌';
+}
+
+/* akhir card */
+
+/* awal footer */
+
+footer{
+    padding: 20px;
+    background-color: black;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p{
+    color: white;
+}
+
+/* akhir footer */
+

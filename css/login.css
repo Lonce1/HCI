@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-position: center;
+}
+
+/* awal footer */
+
+footer{
+    position: fixed;
+    padding: 20px;
+    background-color: black;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p{
+    color: white;
+}
+
+/* akhir footer */
+
+/* awal navbar */
+
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: black;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+
+.navbar .logo{
+    font-weight: bold;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.option a{
+    padding: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    margin-right: 5px;
+}
+
+.option a:hover{
+    border-bottom: 3px solid white;
+}
+
+.option .login-button{
+    width: 90px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+}
+
+/* akhir navbar */
+
+/* awal login box */
+
+.card{
+    width: 400px;
+    height: 440px;
+    border: 1px solid white;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .login{
+    width: 100%;
+    padding: 40px;
+}
+
+.login h2{
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+.input-box input::placeholder{
+    color: black;
+}
+
+.input-box input:focus::placeholder{
+    color: transparent;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 0px 35px 0px 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 55px;
+}
+
+.forgot{
+    font-size: .9em;
+    color: black;
+    font-weight: 500;
+    margin: -15px 0px 15px;
+}
+
+.forgot a{
+    color: black;
+    text-decoration: none;
+}
+
+.forgot a.hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+}
+
+.login-register{
+    text-decoration: none;
+    font-size: .9em;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.login-register a{
+    color: black;
+    text-decoration: none;
+}
+
+.alert {
+    margin-bottom: 20px; /* Space below the alert */
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb; /* Border color */
+}
+.alert-success{
+    margin-bottom: 20px; /* Space below the alert */
+    background-color: green; /* Light red background */
+    color: white; /* Dark red text */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb; /* Border color */   
+}
+.alert ul{
+    list-style: none;
+}
+/* akhir login box */

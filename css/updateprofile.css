@@ -1,3 +1,15 @@
+:root {
+    --primary-color: #000000;  
+    --secondary-color: #4B5563; 
+    --accent-color: #1F2937; 
+    --text-light: #ffffff;
+    --text-dark: #111827;
+    --background-light: #F9FAFB;
+    --background-grey: #F3F4F6;
+    --border-color: #E5E7EB;
+    --transition: all 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,151 +17,223 @@
 }
 
 body {
+    font-family: system-ui, -apple-system, sans-serif;
     background-image: url("../img/space.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--text-light);
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 2rem;
+}
+
+.option a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--text-light);
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.option a:hover {
+    color: var(--border-color);
+}
+
+.option a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-light);
+    transition: var(--transition);
+}
+
+.option .login-button {
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: bold;
+    margin-left: 4rem;
+}
+
+.option .login-button:hover {
+    background-color: var(--text-light);
+    color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.option .login-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* bagian profile */
+.wrapper {
+    padding-top: 76px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-position: center;
-    font-family: Arial, sans-serif;
+    padding: 100px 20px;
 }
 
-/* Start of footer */
-footer {
-    position: fixed;
-    padding: 20px;
-    background-color: black;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-
-footer p {
-    color: white;
-}
-
-/* End of footer */
-
-/* Start of navbar */
-.navbar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background-color: black;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    z-index: 99;
-}
-
-.navbar .logo {
-    font-weight: bold;
-    color: aliceblue;
-    text-decoration: none;
-}
-
-.option a {
-    padding: 5px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    margin-right: 5px;
-}
-
-.option a:hover {
-    border-bottom: 3px solid white;
-}
-
-.option .login-button {
-    width: 90px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #fff;
-    outline: none;
-    border-radius: 20px;
-    cursor: pointer;
-    color: white;
-    font-size: 15px;
-}
-
-/* End of navbar */
-
-/* Profile section styling */
 .profile-section {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     gap: 50px;
     max-width: 1000px;
     width: 100%;
-    margin: 0 auto;
-    padding: 50px 20px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
+    padding: 40px;
 }
 
-.current-info, .edit-profile-container {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    color: white;
-}
-
-/* Left box (Current Information) styling */
 .current-info {
-    text-align: center;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    height: fit-content;
 }
 
 .current-info h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.current-info img.profile-pic {
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
+    border: 3px solid var(--text-light);
 }
 
-/* Right box (Edit Profile Form) styling */
+.info-details {
+    width: 100%;
+}
+
+.info-item {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-item strong {
+    color: #00aaff;
+}
+
+.edit-profile-container {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+}
+
 .edit-profile-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.edit-profile-container label {
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
     display: block;
-    text-align: left;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #00aaff;
 }
 
-.edit-profile-container input[type="text"],
-.edit-profile-container input[type="email"],
-.edit-profile-container input[type="tel"],
-.edit-profile-container input[type="file"] {
+.form-input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+    color: var(--text-light);
+    transition: var(--transition);
 }
 
-.edit-profile-container button {
+.form-input:focus {
+    outline: none;
+    border-color: #00aaff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.file-input {
     width: 100%;
-    padding: 10px;
-    background-color: #00aaff;
-    border: none;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-    color: white;
-    font-size: 18px;
+    color: var(--text-light);
     cursor: pointer;
 }
 
-.edit-profile-container button:hover {
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00aaff;
+    border: none;
+    border-radius: 5px;
+    color: var(--text-light);
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
     background-color: #0088cc;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 2rem;
+    text-align: center;
 }

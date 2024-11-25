@@ -216,6 +216,8 @@ body {
 .card h3 {
   color: var(--text-dark);
   margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .card-content ul {
